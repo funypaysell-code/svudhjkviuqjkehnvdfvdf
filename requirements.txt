@@ -1,0 +1,7 @@
+aiogram>=3.4,<4.0
+aiohttp>=3.9,<4.0
+aiosqlite>=0.19,<1.0
+python-dotenv>=1.0,<2.0
+pycountry>=23.12.11
+phonenumbers>=8.13,<9.0
+telethon>=1.37,<2.0

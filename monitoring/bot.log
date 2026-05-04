@@ -1,0 +1,607 @@
+2026-05-04 13:40:48 | INFO     | db.database — Database initialized at data\monitor.db
+2026-05-04 13:40:48 | INFO     | telethon.network.mtprotosender — Connecting to 149.154.167.51:443/TcpFull...
+2026-05-04 13:40:49 | INFO     | telethon.network.mtprotosender — Connection to 149.154.167.51:443/TcpFull complete!
+2026-05-04 13:40:50 | INFO     | telethon.client.users — Phone migrated to 5
+2026-05-04 13:40:50 | INFO     | telethon.client.telegrambaseclient — Reconnecting to new data center 5
+2026-05-04 13:40:50 | INFO     | telethon.network.mtprotosender — Disconnecting from 149.154.167.51:443/TcpFull...
+2026-05-04 13:40:50 | INFO     | telethon.network.mtprotosender — Disconnection from 149.154.167.51:443/TcpFull complete!
+2026-05-04 13:40:50 | INFO     | telethon.network.mtprotosender — Connecting to 91.108.56.155:443/TcpFull...
+2026-05-04 13:40:52 | INFO     | telethon.network.mtprotosender — Connection to 91.108.56.155:443/TcpFull complete!
+2026-05-04 13:41:01 | INFO     | services.monitor — Telethon userbot started.
+2026-05-04 13:41:01 | INFO     | __main__ — Bot started. Admin ID: 123456789
+2026-05-04 13:41:03 | WARNING  | __main__ — Could not send startup notification: Telegram server says - Unauthorized
+2026-05-04 13:41:03 | INFO     | aiogram.dispatcher — Start polling
+2026-05-04 13:41:03 | INFO     | services.monitor — Monitoring loop started. Interval: 300 seconds.
+2026-05-04 13:41:03 | ERROR    | services.monitor — Unhandled error in monitoring loop: 'Connection' object has no attribute 'get_all_active_monitored'
+Traceback (most recent call last):
+  File "D:\teleg\ABUZZISHE\monitoring\services\monitor.py", line 120, in run_monitoring_loop
+    await _check_all_accounts(bot)
+  File "D:\teleg\ABUZZISHE\monitoring\services\monitor.py", line 129, in _check_all_accounts
+    accounts = await db.get_all_active_monitored()
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'Connection' object has no attribute 'get_all_active_monitored'
+2026-05-04 13:41:03 | INFO     | aiogram.dispatcher — Polling stopped
+2026-05-04 13:41:03 | INFO     | __main__ — Shutting down…
+2026-05-04 13:41:03 | INFO     | telethon.network.mtprotosender — Disconnecting from 91.108.56.155:443/TcpFull...
+2026-05-04 13:41:03 | INFO     | telethon.network.mtprotosender — Disconnection from 91.108.56.155:443/TcpFull complete!
+2026-05-04 13:41:03 | INFO     | services.monitor — Telethon userbot disconnected.
+2026-05-04 13:41:03 | INFO     | db.database — Database connection closed.
+2026-05-04 13:41:03 | ERROR    | asyncio — Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x000001F417FB30E0>
+2026-05-04 13:41:03 | ERROR    | asyncio — Unclosed connector
+connections: ['deque([(<aiohttp.client_proto.ResponseHandler object at 0x000001F417F9A2D0>, 2332.475438)])']
+connector: <aiohttp.connector.TCPConnector object at 0x000001F417FB7C50>
+2026-05-04 13:43:41 | INFO     | db.database — Database initialized at data\monitor.db
+2026-05-04 13:43:41 | INFO     | telethon.network.mtprotosender — Connecting to 91.108.56.155:443/TcpFull...
+2026-05-04 13:43:41 | INFO     | telethon.network.mtprotosender — Connection to 91.108.56.155:443/TcpFull complete!
+2026-05-04 13:43:43 | INFO     | services.monitor — Telethon userbot started.
+2026-05-04 13:43:43 | INFO     | __main__ — Bot started. Admin ID: 6239437665
+2026-05-04 13:43:47 | WARNING  | __main__ — Could not send startup notification: Telegram server says - Bad Request: chat not found
+2026-05-04 13:43:47 | INFO     | aiogram.dispatcher — Start polling
+2026-05-04 13:43:47 | INFO     | services.monitor — Monitoring loop started. Interval: 300 seconds.
+2026-05-04 13:43:47 | ERROR    | services.monitor — Unhandled error in monitoring loop: Database is not initialized. Call Database.init() first.
+Traceback (most recent call last):
+  File "D:\teleg\ABUZZISHE\monitoring\services\monitor.py", line 120, in run_monitoring_loop
+    await _check_all_accounts(bot)
+  File "D:\teleg\ABUZZISHE\monitoring\services\monitor.py", line 128, in _check_all_accounts
+    db = await get_db()
+         ^^^^^^^^^^^^^^
+  File "D:\teleg\ABUZZISHE\monitoring\db\database.py", line 17, in get_db
+    raise RuntimeError("Database is not initialized. Call Database.init() first.")
+RuntimeError: Database is not initialized. Call Database.init() first.
+2026-05-04 13:43:47 | INFO     | aiogram.dispatcher — Run polling for bot @monitoringtgrobot id=8767570591 - 'monitoringtg'
+2026-05-04 13:43:53 | INFO     | aiogram.event — Update id=233630778 is not handled. Duration 0 ms by bot id=8767570591
+2026-05-04 13:43:53 | ERROR    | aiogram.event — Cause exception while process update id=233630778 by bot id=8767570591
+RuntimeError: Database is not initialized. Call Database.init() first.
+Traceback (most recent call last):
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 320, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 164, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 27, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 58, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\fsm\middleware.py", line 43, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 283, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\router.py", line 161, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\router.py", line 153, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\router.py", line 189, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\router.py", line 161, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\router.py", line 153, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\router.py", line 181, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\teleg\ABUZZISHE\monitoring\services\access.py", line 31, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "D:\teleg\ABUZZISHE\monitoring\handlers\common.py", line 27, in cmd_start
+    db = await get_db()
+         ^^^^^^^^^^^^^^
+  File "D:\teleg\ABUZZISHE\monitoring\db\database.py", line 17, in get_db
+    raise RuntimeError("Database is not initialized. Call Database.init() first.")
+RuntimeError: Database is not initialized. Call Database.init() first.
+2026-05-04 13:44:00 | INFO     | aiogram.dispatcher — Polling stopped
+2026-05-04 13:44:00 | ERROR    | aiogram.dispatcher — Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+2026-05-04 13:44:00 | WARNING  | aiogram.dispatcher — Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8767570591)
+2026-05-04 13:44:00 | INFO     | __main__ — Shutting down…
+2026-05-04 13:44:00 | INFO     | telethon.network.mtprotosender — Disconnecting from 91.108.56.155:443/TcpFull...
+2026-05-04 13:44:00 | INFO     | telethon.network.mtprotosender — Disconnection from 91.108.56.155:443/TcpFull complete!
+2026-05-04 13:44:00 | INFO     | services.monitor — Telethon userbot disconnected.
+2026-05-04 13:44:00 | INFO     | db.database — Database connection closed.
+2026-05-04 13:44:00 | INFO     | aiogram.dispatcher — Polling stopped for bot @monitoringtgrobot id=8767570591 - 'monitoringtg'
+2026-05-04 13:46:11 | INFO     | db.database — Database initialized at data\monitor.db
+2026-05-04 13:46:11 | INFO     | telethon.network.mtprotosender — Connecting to 91.108.56.155:443/TcpFull...
+2026-05-04 13:46:11 | INFO     | telethon.network.mtprotosender — Connection to 91.108.56.155:443/TcpFull complete!
+2026-05-04 13:46:13 | INFO     | services.monitor — Telethon userbot started.
+2026-05-04 13:46:13 | INFO     | __main__ — Bot started. Admin ID: 6239437665
+2026-05-04 13:46:13 | INFO     | aiogram.dispatcher — Start polling
+2026-05-04 13:46:13 | INFO     | services.monitor — Monitoring loop started. Interval: 300 seconds.
+2026-05-04 13:46:13 | INFO     | aiogram.dispatcher — Run polling for bot @monitoringtgrobot id=8767570591 - 'monitoringtg'
+2026-05-04 13:46:15 | INFO     | aiogram.event — Update id=233630779 is handled. Duration 344 ms by bot id=8767570591
+2026-05-04 13:46:24 | INFO     | telethon.client.updates — Got difference for channel 2636457768 updates
+2026-05-04 13:46:25 | INFO     | aiogram.event — Update id=233630780 is handled. Duration 448 ms by bot id=8767570591
+2026-05-04 13:46:28 | INFO     | aiogram.event — Update id=233630781 is handled. Duration 452 ms by bot id=8767570591
+2026-05-04 13:46:29 | INFO     | aiogram.event — Update id=233630782 is not handled. Duration 218 ms by bot id=8767570591
+2026-05-04 13:46:29 | ERROR    | aiogram.event — Cause exception while process update id=233630782 by bot id=8767570591
+TelegramBadRequest: Telegram server says - Bad Request: message is not modified: specified new message content and reply markup are exactly the same as a current content and reply markup of the message
+Traceback (most recent call last):
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 320, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 164, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 27, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 58, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\fsm\middleware.py", line 43, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 283, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\router.py", line 161, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\router.py", line 153, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\router.py", line 189, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\router.py", line 161, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\router.py", line 153, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\router.py", line 181, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\teleg\ABUZZISHE\monitoring\services\access.py", line 31, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "D:\teleg\ABUZZISHE\monitoring\handlers\common.py", line 63, in cb_main_menu
+    await cb.message.edit_text("📋 <b>Главное меню</b>", parse_mode="HTML", reply_markup=kb)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\methods\base.py", line 82, in emit
+    return await bot(self)
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\client\bot.py", line 484, in __call__
+    return await self.session(self, method, timeout=request_timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\client\session\base.py", line 259, in __call__
+    return cast(TelegramType, await middleware(bot, method))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\client\session\aiohttp.py", line 177, in make_request
+    response = self.check_response(
+        bot=bot,
+    ...<2 lines>...
+        content=raw_result,
+    )
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python314\Lib\site-packages\aiogram\client\session\base.py", line 121, in check_response
+    raise TelegramBadRequest(method=method, message=description)
+aiogram.exceptions.TelegramBadRequest: Telegram server says - Bad Request: message is not modified: specified new message content and reply markup are exactly the same as a current content and reply markup of the message
+2026-05-04 13:46:38 | INFO     | aiogram.dispatcher — Polling stopped
+2026-05-04 13:46:38 | ERROR    | aiogram.dispatcher — Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+2026-05-04 13:46:38 | WARNING  | aiogram.dispatcher — Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8767570591)
+2026-05-04 13:46:38 | INFO     | __main__ — Shutting down…
+2026-05-04 13:46:38 | INFO     | telethon.network.mtprotosender — Disconnecting from 91.108.56.155:443/TcpFull...
+2026-05-04 13:46:38 | INFO     | telethon.network.mtprotosender — Disconnection from 91.108.56.155:443/TcpFull complete!
+2026-05-04 13:46:38 | INFO     | services.monitor — Telethon userbot disconnected.
+2026-05-04 13:46:38 | INFO     | db.database — Database connection closed.
+2026-05-04 13:46:38 | INFO     | aiogram.dispatcher — Polling stopped for bot @monitoringtgrobot id=8767570591 - 'monitoringtg'
+2026-05-04 13:47:20 | INFO     | db.database — Database initialized at data\monitor.db
+2026-05-04 13:47:20 | INFO     | telethon.network.mtprotosender — Connecting to 91.108.56.155:443/TcpFull...
+2026-05-04 13:47:20 | INFO     | telethon.network.mtprotosender — Connection to 91.108.56.155:443/TcpFull complete!
+2026-05-04 13:47:22 | INFO     | services.monitor — Telethon userbot started.
+2026-05-04 13:47:22 | INFO     | __main__ — Bot started. Admin ID: 6239437665
+2026-05-04 13:47:22 | INFO     | aiogram.dispatcher — Start polling
+2026-05-04 13:47:22 | INFO     | services.monitor — Monitoring loop started. Interval: 300 seconds.
+2026-05-04 13:47:22 | INFO     | aiogram.dispatcher — Run polling for bot @monitoringtgrobot id=8767570591 - 'monitoringtg'
+2026-05-04 13:47:22 | INFO     | aiogram.event — Update id=233630783 is handled. Duration 334 ms by bot id=8767570591
+2026-05-04 13:47:38 | INFO     | aiogram.event — Update id=233630784 is handled. Duration 338 ms by bot id=8767570591
+2026-05-04 13:47:42 | INFO     | aiogram.event — Update id=233630785 is handled. Duration 476 ms by bot id=8767570591
+2026-05-04 13:47:43 | INFO     | handlers.admin — Admin granted access to user 8556038889
+2026-05-04 13:47:43 | INFO     | aiogram.event — Update id=233630786 is handled. Duration 236 ms by bot id=8767570591
+2026-05-04 13:47:46 | INFO     | aiogram.event — Update id=233630787 is handled. Duration 257 ms by bot id=8767570591
+2026-05-04 13:47:48 | INFO     | aiogram.event — Update id=233630788 is handled. Duration 449 ms by bot id=8767570591
+2026-05-04 13:48:07 | INFO     | telethon.client.updates — Got difference for channel 2636457768 updates
+2026-05-04 13:48:08 | INFO     | telethon.client.updates — Got difference for channel 2636457768 updates
+2026-05-04 13:48:12 | INFO     | handlers.user — User 8556038889 added @wfsfsdvvv to monitoring (account_id=1)
+2026-05-04 13:48:12 | INFO     | aiogram.event — Update id=233630789 is handled. Duration 936 ms by bot id=8767570591
+2026-05-04 13:48:26 | INFO     | aiogram.event — Update id=233630790 is handled. Duration 644 ms by bot id=8767570591
+2026-05-04 13:48:31 | INFO     | aiogram.event — Update id=233630791 is handled. Duration 457 ms by bot id=8767570591
+2026-05-04 13:48:32 | INFO     | aiogram.event — Update id=233630792 is handled. Duration 498 ms by bot id=8767570591
+2026-05-04 13:48:34 | INFO     | aiogram.event — Update id=233630793 is handled. Duration 642 ms by bot id=8767570591
+2026-05-04 13:48:35 | INFO     | aiogram.event — Update id=233630794 is handled. Duration 560 ms by bot id=8767570591
+2026-05-04 13:48:52 | INFO     | aiogram.dispatcher — Polling stopped
+2026-05-04 13:48:52 | ERROR    | aiogram.dispatcher — Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+2026-05-04 13:48:52 | WARNING  | aiogram.dispatcher — Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8767570591)
+2026-05-04 13:48:52 | INFO     | __main__ — Shutting down…
+2026-05-04 13:48:52 | INFO     | telethon.network.mtprotosender — Disconnecting from 91.108.56.155:443/TcpFull...
+2026-05-04 13:48:52 | INFO     | telethon.network.mtprotosender — Disconnection from 91.108.56.155:443/TcpFull complete!
+2026-05-04 13:48:52 | INFO     | services.monitor — Telethon userbot disconnected.
+2026-05-04 13:48:52 | INFO     | db.database — Database connection closed.
+2026-05-04 13:48:52 | INFO     | aiogram.dispatcher — Polling stopped for bot @monitoringtgrobot id=8767570591 - 'monitoringtg'
+2026-05-04 13:49:31 | INFO     | db.database — Database initialized at data\monitor.db
+2026-05-04 13:49:31 | INFO     | telethon.network.mtprotosender — Connecting to 91.108.56.155:443/TcpFull...
+2026-05-04 13:49:32 | INFO     | telethon.network.mtprotosender — Connection to 91.108.56.155:443/TcpFull complete!
+2026-05-04 13:49:33 | INFO     | services.monitor — Telethon userbot started.
+2026-05-04 13:49:33 | INFO     | __main__ — Bot started. Admin ID: 6239437665
+2026-05-04 13:49:33 | INFO     | aiogram.dispatcher — Start polling
+2026-05-04 13:49:33 | INFO     | services.monitor — Monitoring loop started. Interval: 10 seconds.
+2026-05-04 13:49:33 | INFO     | services.monitor — Checking 1 monitored account(s)…
+2026-05-04 13:49:33 | INFO     | aiogram.dispatcher — Run polling for bot @monitoringtgrobot id=8767570591 - 'monitoringtg'
+2026-05-04 13:49:40 | INFO     | aiogram.event — Update id=233630795 is handled. Duration 602 ms by bot id=8767570591
+2026-05-04 13:49:41 | INFO     | aiogram.event — Update id=233630796 is handled. Duration 655 ms by bot id=8767570591
+2026-05-04 13:49:46 | INFO     | services.monitor — Checking 1 monitored account(s)…
+2026-05-04 13:49:58 | INFO     | telethon.client.updates — Got difference for channel 2636457768 updates
+2026-05-04 13:49:58 | INFO     | services.monitor — Checking 1 monitored account(s)…
+2026-05-04 13:50:10 | INFO     | services.monitor — Checking 1 monitored account(s)…
+2026-05-04 13:50:23 | INFO     | services.monitor — Checking 1 monitored account(s)…
+2026-05-04 13:50:35 | INFO     | services.monitor — Checking 1 monitored account(s)…
+2026-05-04 13:50:47 | INFO     | services.monitor — Checking 1 monitored account(s)…
+2026-05-04 13:50:59 | INFO     | services.monitor — Checking 1 monitored account(s)…
+2026-05-04 13:51:12 | INFO     | services.monitor — Checking 1 monitored account(s)…
+2026-05-04 13:51:16 | INFO     | aiogram.dispatcher — Polling stopped
+2026-05-04 13:51:16 | ERROR    | aiogram.dispatcher — Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+2026-05-04 13:51:16 | WARNING  | aiogram.dispatcher — Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8767570591)
+2026-05-04 13:51:17 | INFO     | __main__ — Shutting down…
+2026-05-04 13:51:17 | INFO     | telethon.network.mtprotosender — Disconnecting from 91.108.56.155:443/TcpFull...
+2026-05-04 13:51:17 | INFO     | telethon.network.mtprotosender — Disconnection from 91.108.56.155:443/TcpFull complete!
+2026-05-04 13:51:17 | INFO     | services.monitor — Telethon userbot disconnected.
+2026-05-04 13:51:17 | INFO     | db.database — Database connection closed.
+2026-05-04 13:51:17 | INFO     | aiogram.dispatcher — Polling stopped for bot @monitoringtgrobot id=8767570591 - 'monitoringtg'
+2026-05-04 13:52:47 | INFO     | db.database — Database initialized at data\monitor.db
+2026-05-04 13:52:47 | INFO     | telethon.network.mtprotosender — Connecting to 91.108.56.155:443/TcpFull...
+2026-05-04 13:52:47 | INFO     | telethon.network.mtprotosender — Connection to 91.108.56.155:443/TcpFull complete!
+2026-05-04 13:52:48 | INFO     | services.monitor — Telethon userbot started.
+2026-05-04 13:52:48 | INFO     | __main__ — Bot started. Admin ID: 6239437665
+2026-05-04 13:52:49 | INFO     | aiogram.dispatcher — Start polling
+2026-05-04 13:52:49 | INFO     | services.monitor — Monitoring loop started. Interval: 10 seconds.
+2026-05-04 13:52:49 | INFO     | services.monitor — Checking 1 monitored account(s)…
+2026-05-04 13:52:49 | INFO     | aiogram.dispatcher — Run polling for bot @monitoringtgrobot id=8767570591 - 'monitoringtg'
+2026-05-04 13:52:49 | INFO     | services.monitor — [DEBUG] @wfsfsdvvv | username: 'wfsfsdvvv'→'wfsfsdvvv' | name: 'ㅤ'→'ㅤ' | bio: None→None | photo: None→None
+2026-05-04 13:52:49 | INFO     | services.monitor — [DEBUG] @wfsfsdvvv — изменений не обнаружено
+2026-05-04 13:53:01 | INFO     | services.monitor — Checking 1 monitored account(s)…
+2026-05-04 13:53:01 | INFO     | services.monitor — [DEBUG] @wfsfsdvvv | username: 'wfsfsdvvv'→'wfsfsdvvv' | name: 'ㅤ'→'ㅤ' | bio: None→None | photo: None→None
+2026-05-04 13:53:01 | INFO     | services.monitor — [DEBUG] @wfsfsdvvv — изменений не обнаружено
+2026-05-04 13:53:13 | INFO     | services.monitor — Checking 1 monitored account(s)…
+2026-05-04 13:53:13 | INFO     | services.monitor — [DEBUG] @wfsfsdvvv | username: 'wfsfsdvvv'→'wfsfsdvvv' | name: 'ㅤ'→'ㅤ' | bio: None→None | photo: None→None
+2026-05-04 13:53:13 | INFO     | services.monitor — [DEBUG] @wfsfsdvvv — изменений не обнаружено
+2026-05-04 13:53:25 | INFO     | services.monitor — Checking 1 monitored account(s)…
+2026-05-04 13:53:26 | INFO     | services.monitor — [DEBUG] @wfsfsdvvv | username: 'wfsfsdvvv'→'wfsfsdvvv' | name: 'ㅤ'→'ㅤ' | bio: None→None | photo: None→None
+2026-05-04 13:53:26 | INFO     | services.monitor — [DEBUG] @wfsfsdvvv — изменений не обнаружено
+2026-05-04 13:53:38 | INFO     | services.monitor — Checking 1 monitored account(s)…
+2026-05-04 13:53:38 | INFO     | services.monitor — [DEBUG] @wfsfsdvvv | username: 'wfsfsdvvv'→'wfsfsdvvv' | name: 'ㅤ'→'ㅤ' | bio: None→None | photo: None→None
+2026-05-04 13:53:38 | INFO     | services.monitor — [DEBUG] @wfsfsdvvv — изменений не обнаружено
+2026-05-04 13:53:39 | INFO     | telethon.client.updates — Got difference for channel 2636457768 updates
+2026-05-04 13:53:50 | INFO     | services.monitor — Checking 1 monitored account(s)…
+2026-05-04 13:53:50 | INFO     | services.monitor — [DEBUG] @wfsfsdvvv | username: 'wfsfsdvvv'→'wfsfsdvv' | name: 'ㅤ'→'ㅤ' | bio: None→None | photo: None→None
+2026-05-04 13:53:51 | INFO     | services.monitor — Notified user 8556038889 about changes in @wfsfsdvvv: ['Username']
+2026-05-04 13:53:58 | INFO     | aiogram.dispatcher — Polling stopped
+2026-05-04 13:53:58 | ERROR    | aiogram.dispatcher — Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+2026-05-04 13:53:58 | WARNING  | aiogram.dispatcher — Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8767570591)
+2026-05-04 13:53:58 | INFO     | __main__ — Shutting down…
+2026-05-04 13:53:58 | INFO     | telethon.network.mtprotosender — Disconnecting from 91.108.56.155:443/TcpFull...
+2026-05-04 13:53:58 | INFO     | telethon.network.mtprotosender — Disconnection from 91.108.56.155:443/TcpFull complete!
+2026-05-04 13:53:58 | INFO     | services.monitor — Telethon userbot disconnected.
+2026-05-04 13:53:58 | INFO     | db.database — Database connection closed.
+2026-05-04 13:53:58 | INFO     | aiogram.dispatcher — Polling stopped for bot @monitoringtgrobot id=8767570591 - 'monitoringtg'
+2026-05-04 13:53:58 | ERROR    | asyncio — Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x000001960BF0EA50>
+2026-05-04 13:53:58 | ERROR    | asyncio — Unclosed connector
+connections: ['deque([(<aiohttp.client_proto.ResponseHandler object at 0x000001960BEA5750>, 3107.5147735)])']
+connector: <aiohttp.connector.TCPConnector object at 0x000001960BF48A50>
+2026-05-04 13:57:39 | INFO     | db.database — Database initialized at data\monitor.db
+2026-05-04 13:57:39 | INFO     | telethon.network.mtprotosender — Connecting to 91.108.56.155:443/TcpFull...
+2026-05-04 13:57:40 | INFO     | telethon.network.mtprotosender — Connection to 91.108.56.155:443/TcpFull complete!
+2026-05-04 13:57:41 | INFO     | services.monitor — Telethon userbot started.
+2026-05-04 13:57:41 | INFO     | __main__ — Bot started. Admin ID: 6239437665
+2026-05-04 13:57:41 | INFO     | aiogram.dispatcher — Start polling
+2026-05-04 13:57:41 | INFO     | services.monitor — Monitoring loop started. Interval: 10 seconds.
+2026-05-04 13:57:41 | INFO     | services.monitor — Checking 1 monitored account(s)...
+2026-05-04 13:57:41 | INFO     | aiogram.dispatcher — Run polling for bot @monitoringtgrobot id=8767570591 - 'monitoringtg'
+2026-05-04 13:57:42 | INFO     | services.monitor — [DEBUG] @wfsfsdvv | username: 'wfsfsdvv'->'wfsfsdvv' | name: 'ㅤ'->'ㅤ' | bio: None->None | photo: None->None
+2026-05-04 13:57:42 | INFO     | services.monitor — [DEBUG] @wfsfsdvv -- изменений нет
+2026-05-04 13:57:54 | INFO     | services.monitor — Checking 1 monitored account(s)...
+2026-05-04 13:57:54 | INFO     | services.monitor — [DEBUG] @wfsfsdvv | username: 'wfsfsdvv'->'wfsfsdvv' | name: 'ㅤ'->'ㅤ' | bio: None->None | photo: None->None
+2026-05-04 13:57:54 | INFO     | services.monitor — [DEBUG] @wfsfsdvv -- изменений нет
+2026-05-04 13:58:06 | INFO     | services.monitor — Checking 1 monitored account(s)...
+2026-05-04 13:58:07 | INFO     | services.monitor — [DEBUG] @wfsfsdvv | username: 'wfsfsdvv'->'wfsfsdvv' | name: 'ㅤ'->'ㅤ' | bio: None->None | photo: None->None
+2026-05-04 13:58:07 | INFO     | services.monitor — [DEBUG] @wfsfsdvv -- изменений нет
+2026-05-04 13:58:19 | INFO     | services.monitor — Checking 1 monitored account(s)...
+2026-05-04 13:58:19 | INFO     | services.monitor — [DEBUG] @wfsfsdvv | username: 'wfsfsdvv'->'wfsfsdvv' | name: 'ㅤ'->'ㅤ' | bio: None->None | photo: None->None
+2026-05-04 13:58:19 | INFO     | services.monitor — [DEBUG] @wfsfsdvv -- изменений нет
+2026-05-04 13:58:31 | INFO     | services.monitor — Checking 1 monitored account(s)...
+2026-05-04 13:58:32 | INFO     | services.monitor — [DEBUG] @wfsfsdvv | username: 'wfsfsdvv'->'wfsfsdvv' | name: 'ㅤ'->'ㅤ' | bio: None->None | photo: None->None
+2026-05-04 13:58:32 | INFO     | services.monitor — [DEBUG] @wfsfsdvv -- изменений нет
+2026-05-04 13:58:44 | INFO     | services.monitor — Checking 1 monitored account(s)...
+2026-05-04 13:58:44 | INFO     | services.monitor — [DEBUG] @wfsfsdvv | username: 'wfsfsdvv'->'wfsfsdvv' | name: 'ㅤ'->'ㅤ' | bio: None->None | photo: None->None
+2026-05-04 13:58:44 | INFO     | services.monitor — [DEBUG] @wfsfsdvv -- изменений нет
+2026-05-04 13:58:56 | INFO     | services.monitor — Checking 1 monitored account(s)...
+2026-05-04 13:58:56 | INFO     | services.monitor — [DEBUG] @wfsfsdvv | username: 'wfsfsdvv'->'wfsfsdvv' | name: 'ㅤ'->'ㅤ' | bio: None->None | photo: None->None
+2026-05-04 13:58:56 | INFO     | services.monitor — [DEBUG] @wfsfsdvv -- изменений нет
+2026-05-04 13:59:08 | INFO     | services.monitor — Checking 1 monitored account(s)...
+2026-05-04 13:59:09 | INFO     | services.monitor — [DEBUG] @wfsfsdvv | username: 'wfsfsdvv'->'wfsfsdvv' | name: 'ㅤ'->'ㅤ' | bio: None->None | photo: None->None
+2026-05-04 13:59:09 | INFO     | services.monitor — [DEBUG] @wfsfsdvv -- изменений нет
+2026-05-04 13:59:11 | INFO     | telethon.client.updates — Got difference for channel 2636457768 updates
+2026-05-04 13:59:21 | INFO     | services.monitor — Checking 1 monitored account(s)...
+2026-05-04 13:59:21 | INFO     | services.monitor — [DEBUG] @wfsfsdvv | username: 'wfsfsdvv'->'wfsfsdvv' | name: 'ㅤ'->'ㅤ' | bio: None->None | photo: None->None
+2026-05-04 13:59:21 | INFO     | services.monitor — [DEBUG] @wfsfsdvv -- изменений нет
+2026-05-04 13:59:32 | INFO     | aiogram.event — Update id=233630797 is handled. Duration 553 ms by bot id=8767570591
+2026-05-04 13:59:33 | INFO     | services.monitor — Checking 1 monitored account(s)...
+2026-05-04 13:59:34 | ERROR    | services.monitor — Error fetching profile for @8505959617: Cannot find any entity corresponding to "8505959617"
+2026-05-04 13:59:34 | INFO     | aiogram.event — Update id=233630798 is handled. Duration 684 ms by bot id=8767570591
+2026-05-04 13:59:34 | INFO     | services.monitor — [DEBUG] @wfsfsdvv | username: 'wfsfsdvv'->'wfsfsdvv' | name: 'ㅤ'->'ㅤ' | bio: None->None | photo: None->None
+2026-05-04 13:59:34 | INFO     | services.monitor — [DEBUG] @wfsfsdvv -- изменений нет
+2026-05-04 13:59:46 | INFO     | services.monitor — Checking 1 monitored account(s)...
+2026-05-04 13:59:46 | INFO     | services.monitor — [DEBUG] @wfsfsdvv | username: 'wfsfsdvv'->'wfsfsdvv' | name: 'ㅤ'->'ㅤ' | bio: None->None | photo: None->None
+2026-05-04 13:59:46 | INFO     | services.monitor — [DEBUG] @wfsfsdvv -- изменений нет
+2026-05-04 13:59:52 | INFO     | telethon.client.updates — Got difference for channel 2636457768 updates
+2026-05-04 13:59:57 | INFO     | telethon.client.updates — Got difference for channel 3830128620 updates
+2026-05-04 13:59:57 | INFO     | telethon.client.updates — Got difference for channel 2636457768 updates
+2026-05-04 13:59:58 | INFO     | services.monitor — Checking 1 monitored account(s)...
+2026-05-04 13:59:59 | INFO     | services.monitor — [DEBUG] @wfsfsdvv | username: 'wfsfsdvv'->'wfsfsdvv' | name: 'ㅤ'->'ㅤ' | bio: None->None | photo: None->None
+2026-05-04 13:59:59 | INFO     | services.monitor — [DEBUG] @wfsfsdvv -- изменений нет
+2026-05-04 14:00:08 | INFO     | telethon.client.updates — Got difference for channel 2636457768 updates
+2026-05-04 14:00:11 | INFO     | services.monitor — Checking 1 monitored account(s)...
+2026-05-04 14:00:11 | INFO     | services.monitor — [DEBUG] @wfsfsdvv | username: 'wfsfsdvv'->'wfsfsdvv' | name: 'ㅤ'->'ㅤ' | bio: None->None | photo: None->None
+2026-05-04 14:00:11 | INFO     | services.monitor — [DEBUG] @wfsfsdvv -- изменений нет
+2026-05-04 14:00:23 | INFO     | services.monitor — Checking 1 monitored account(s)...
+2026-05-04 14:00:24 | INFO     | services.monitor — [DEBUG] @wfsfsdvv | username: 'wfsfsdvv'->'wfsfsdvv' | name: 'ㅤ'->'ㅤ' | bio: None->None | photo: None->None
+2026-05-04 14:00:24 | INFO     | services.monitor — [DEBUG] @wfsfsdvv -- изменений нет
+2026-05-04 14:00:36 | INFO     | services.monitor — Checking 1 monitored account(s)...
+2026-05-04 14:00:36 | INFO     | services.monitor — [DEBUG] @wfsfsdvv | username: 'wfsfsdvv'->'wfsfsdvv' | name: 'ㅤ'->'ㅤ' | bio: None->None | photo: None->None
+2026-05-04 14:00:36 | INFO     | services.monitor — [DEBUG] @wfsfsdvv -- изменений нет
+2026-05-04 14:00:48 | INFO     | services.monitor — Checking 1 monitored account(s)...
+2026-05-04 14:00:49 | INFO     | services.monitor — [DEBUG] @wfsfsdvv | username: 'wfsfsdvv'->'wfsfsdvv' | name: 'ㅤ'->'ㅤ' | bio: None->None | photo: None->None
+2026-05-04 14:00:49 | INFO     | services.monitor — [DEBUG] @wfsfsdvv -- изменений нет
+2026-05-04 14:01:01 | INFO     | services.monitor — Checking 1 monitored account(s)...
+2026-05-04 14:01:01 | INFO     | services.monitor — [DEBUG] @wfsfsdvv | username: 'wfsfsdvv'->'wfsfsdvv' | name: 'ㅤ'->'ㅤ' | bio: None->None | photo: None->None
+2026-05-04 14:01:01 | INFO     | services.monitor — [DEBUG] @wfsfsdvv -- изменений нет
+2026-05-04 14:01:13 | INFO     | services.monitor — Checking 1 monitored account(s)...
+2026-05-04 14:01:14 | INFO     | services.monitor — [DEBUG] @wfsfsdvv | username: 'wfsfsdvv'->'wfsfsdvv' | name: 'ㅤ'->'ㅤ' | bio: None->None | photo: None->None
+2026-05-04 14:01:14 | INFO     | services.monitor — [DEBUG] @wfsfsdvv -- изменений нет
+2026-05-04 14:01:26 | INFO     | services.monitor — Checking 1 monitored account(s)...
+2026-05-04 14:01:26 | INFO     | services.monitor — [DEBUG] @wfsfsdvv | username: 'wfsfsdvv'->'wfsfsdvv' | name: 'ㅤ'->'ㅤ' | bio: None->None | photo: None->None
+2026-05-04 14:01:26 | INFO     | services.monitor — [DEBUG] @wfsfsdvv -- изменений нет
+2026-05-04 14:01:38 | INFO     | services.monitor — Checking 1 monitored account(s)...
+2026-05-04 14:01:39 | INFO     | services.monitor — [DEBUG] @wfsfsdvv | username: 'wfsfsdvv'->'wfsfsdvv' | name: 'ㅤ'->'ㅤ' | bio: None->None | photo: None->None
+2026-05-04 14:01:39 | INFO     | services.monitor — [DEBUG] @wfsfsdvv -- изменений нет
+2026-05-04 14:01:39 | INFO     | telethon.client.updates — Got difference for channel 2636457768 updates
+2026-05-04 14:01:51 | INFO     | services.monitor — Checking 1 monitored account(s)...
+2026-05-04 14:01:51 | INFO     | services.monitor — [DEBUG] @wfsfsdvv | username: 'wfsfsdvv'->'wfsfsdvv' | name: 'ㅤ'->'ㅤ' | bio: None->None | photo: None->None
+2026-05-04 14:01:51 | INFO     | services.monitor — [DEBUG] @wfsfsdvv -- изменений нет
+2026-05-04 14:02:03 | INFO     | services.monitor — Checking 1 monitored account(s)...
+2026-05-04 14:02:04 | INFO     | services.monitor — [DEBUG] @wfsfsdvv | username: 'wfsfsdvv'->'wfsfsdvv' | name: 'ㅤ'->'ㅤ' | bio: None->None | photo: None->None
+2026-05-04 14:02:04 | INFO     | services.monitor — [DEBUG] @wfsfsdvv -- изменений нет
+2026-05-04 14:02:16 | INFO     | services.monitor — Checking 1 monitored account(s)...
+2026-05-04 14:02:16 | INFO     | services.monitor — [DEBUG] @wfsfsdvv | username: 'wfsfsdvv'->'wfsfsdvv' | name: 'ㅤ'->'ㅤ' | bio: None->None | photo: None->None
+2026-05-04 14:02:16 | INFO     | services.monitor — [DEBUG] @wfsfsdvv -- изменений нет
+2026-05-04 14:02:28 | INFO     | services.monitor — Checking 1 monitored account(s)...
+2026-05-04 14:02:28 | INFO     | services.monitor — [DEBUG] @wfsfsdvv | username: 'wfsfsdvv'->'wfsfsdvv' | name: 'ㅤ'->'ㅤ' | bio: None->None | photo: None->None
+2026-05-04 14:02:28 | INFO     | services.monitor — [DEBUG] @wfsfsdvv -- изменений нет
+2026-05-04 14:02:33 | INFO     | telethon.client.updates — Got difference for channel 2636457768 updates
+2026-05-04 14:02:40 | INFO     | services.monitor — Checking 1 monitored account(s)...
+2026-05-04 14:02:41 | INFO     | services.monitor — [DEBUG] @wfsfsdvv | username: 'wfsfsdvv'->'wfsfsdvv' | name: 'ㅤ'->'ㅤ' | bio: None->None | photo: None->None
+2026-05-04 14:02:41 | INFO     | services.monitor — [DEBUG] @wfsfsdvv -- изменений нет
+2026-05-04 14:02:53 | INFO     | services.monitor — Checking 1 monitored account(s)...
+2026-05-04 14:02:53 | INFO     | services.monitor — [DEBUG] @wfsfsdvv | username: 'wfsfsdvv'->'wfsfsdvv' | name: 'ㅤ'->'ㅤ' | bio: None->None | photo: None->None
+2026-05-04 14:02:53 | INFO     | services.monitor — [DEBUG] @wfsfsdvv -- изменений нет
+2026-05-04 14:03:05 | INFO     | services.monitor — Checking 1 monitored account(s)...
+2026-05-04 14:03:06 | INFO     | services.monitor — [DEBUG] @wfsfsdvv | username: 'wfsfsdvv'->'wfsfsdvv' | name: 'ㅤ'->'ㅤ' | bio: None->None | photo: None->None
+2026-05-04 14:03:06 | INFO     | services.monitor — [DEBUG] @wfsfsdvv -- изменений нет
+2026-05-04 14:03:13 | INFO     | telethon.client.updates — Got difference for channel 3830128620 updates
+2026-05-04 14:03:18 | INFO     | services.monitor — Checking 1 monitored account(s)...
+2026-05-04 14:03:18 | INFO     | services.monitor — [DEBUG] @wfsfsdvv | username: 'wfsfsdvv'->'wfsfsdvv' | name: 'ㅤ'->'ㅤ' | bio: None->None | photo: None->None
+2026-05-04 14:03:18 | INFO     | services.monitor — [DEBUG] @wfsfsdvv -- изменений нет
+2026-05-04 14:03:30 | INFO     | services.monitor — Checking 1 monitored account(s)...
+2026-05-04 14:03:31 | INFO     | services.monitor — [DEBUG] @wfsfsdvv | username: 'wfsfsdvv'->'wfsfsdvv' | name: 'ㅤ'->'ㅤ' | bio: None->None | photo: None->None
+2026-05-04 14:03:31 | INFO     | services.monitor — [DEBUG] @wfsfsdvv -- изменений нет
+2026-05-04 14:03:34 | INFO     | aiogram.dispatcher — Polling stopped
+2026-05-04 14:03:34 | ERROR    | aiogram.dispatcher — Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+2026-05-04 14:03:34 | WARNING  | aiogram.dispatcher — Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8767570591)
+2026-05-04 14:03:34 | INFO     | aiogram.dispatcher — Polling stopped for bot @monitoringtgrobot id=8767570591 - 'monitoringtg'
+2026-05-04 14:03:34 | INFO     | __main__ — Shutting down…
+2026-05-04 14:03:34 | INFO     | telethon.network.mtprotosender — Disconnecting from 91.108.56.155:443/TcpFull...
+2026-05-04 14:03:34 | INFO     | telethon.network.mtprotosender — Disconnection from 91.108.56.155:443/TcpFull complete!
+2026-05-04 14:03:34 | INFO     | services.monitor — Telethon userbot disconnected.
+2026-05-04 14:03:34 | INFO     | db.database — Database connection closed.
+2026-05-04 14:03:50 | INFO     | db.database — Database initialized at data\monitor.db
+2026-05-04 14:03:50 | INFO     | telethon.network.mtprotosender — Connecting to 91.108.56.155:443/TcpFull...
+2026-05-04 14:03:50 | INFO     | telethon.network.mtprotosender — Connection to 91.108.56.155:443/TcpFull complete!
+2026-05-04 14:03:51 | INFO     | services.monitor — Telethon userbot started.
+2026-05-04 14:03:51 | INFO     | __main__ — Bot started. Admin ID: 6239437665
+2026-05-04 14:03:51 | INFO     | aiogram.dispatcher — Start polling
+2026-05-04 14:03:51 | INFO     | services.monitor — Monitoring loop started. Interval: 10 seconds.
+2026-05-04 14:03:51 | INFO     | services.monitor — Checking 1 monitored account(s)...
+2026-05-04 14:03:51 | INFO     | aiogram.dispatcher — Run polling for bot @monitoringtgrobot id=8767570591 - 'monitoringtg'
+2026-05-04 14:03:52 | INFO     | services.monitor — [DEBUG] 8374515523 | username: 'wfsfsdvv'->'wfsfsdvv' | name: 'ㅤ'->'ㅤ' | bio: None->'You can contact @wfsfsdvv right away.' | photo: None->'3a0c55594b675fb09481e85b3a04565d'
+2026-05-04 14:03:52 | INFO     | services.monitor — Notified user 8556038889 about changes in @wfsfsdvv: ['Bio', 'Фото профиля']
+2026-05-04 14:04:04 | INFO     | services.monitor — Checking 1 monitored account(s)...
+2026-05-04 14:04:05 | INFO     | telethon.client.updates — Got difference for channel 2636457768 updates
+2026-05-04 14:04:05 | INFO     | services.monitor — [DEBUG] 8374515523 | username: 'wfsfsdvv'->'wfsfsdvv' | name: 'ㅤ'->'ㅤ' | bio: 'You can contact @wfsfsdvv right away.'->'You can contact @wfsfsdvv right away.' | photo: '3a0c55594b675fb09481e85b3a04565d'->'3a0c55594b675fb09481e85b3a04565d'
+2026-05-04 14:04:05 | INFO     | services.monitor — [DEBUG] 8374515523 -- изменений нет
+2026-05-04 14:04:07 | INFO     | aiogram.event — Update id=233630799 is handled. Duration 240 ms by bot id=8767570591
+2026-05-04 14:04:09 | INFO     | aiogram.event — Update id=233630800 is handled. Duration 456 ms by bot id=8767570591
+2026-05-04 14:04:10 | ERROR    | services.monitor — Error fetching profile for 8505959617: Could not find the input entity for PeerUser(user_id=8505959617) (PeerUser). Please read https://docs.telethon.dev/en/stable/concepts/entities.html to find out more details.
+2026-05-04 14:04:10 | INFO     | aiogram.event — Update id=233630801 is handled. Duration 666 ms by bot id=8767570591
+2026-05-04 14:04:17 | INFO     | services.monitor — Checking 1 monitored account(s)...
+2026-05-04 14:04:18 | INFO     | services.monitor — [DEBUG] 8374515523 | username: 'wfsfsdvv'->'wfsfsdvv' | name: 'ㅤ'->'ㅤ' | bio: 'You can contact @wfsfsdvv right away.'->'You can contact @wfsfsdvv right away.' | photo: '3a0c55594b675fb09481e85b3a04565d'->'3a0c55594b675fb09481e85b3a04565d'
+2026-05-04 14:04:18 | INFO     | services.monitor — [DEBUG] 8374515523 -- изменений нет
+2026-05-04 14:04:26 | INFO     | aiogram.event — Update id=233630802 is handled. Duration 450 ms by bot id=8767570591
+2026-05-04 14:04:29 | INFO     | aiogram.event — Update id=233630803 is handled. Duration 562 ms by bot id=8767570591
+2026-05-04 14:04:30 | INFO     | services.monitor — Checking 1 monitored account(s)...
+2026-05-04 14:04:30 | INFO     | aiogram.event — Update id=233630804 is handled. Duration 444 ms by bot id=8767570591
+2026-05-04 14:04:31 | INFO     | services.monitor — [DEBUG] 8374515523 | username: 'wfsfsdvv'->'wfsfsdvv' | name: 'ㅤ'->'ㅤ' | bio: 'You can contact @wfsfsdvv right away.'->'You can contact @wfsfsdvv right away.' | photo: '3a0c55594b675fb09481e85b3a04565d'->'3a0c55594b675fb09481e85b3a04565d'
+2026-05-04 14:04:31 | INFO     | services.monitor — [DEBUG] 8374515523 -- изменений нет
+2026-05-04 14:04:43 | INFO     | services.monitor — Checking 1 monitored account(s)...
+2026-05-04 14:04:44 | INFO     | services.monitor — [DEBUG] 8374515523 | username: 'wfsfsdvv'->'wfsfsdvv' | name: 'ㅤ'->'ㅤ' | bio: 'You can contact @wfsfsdvv right away.'->'You can contact @wfsfsdvv right away.' | photo: '3a0c55594b675fb09481e85b3a04565d'->'3a0c55594b675fb09481e85b3a04565d'
+2026-05-04 14:04:44 | INFO     | services.monitor — [DEBUG] 8374515523 -- изменений нет
+2026-05-04 14:04:45 | INFO     | aiogram.event — Update id=233630805 is handled. Duration 453 ms by bot id=8767570591
+2026-05-04 14:04:46 | INFO     | handlers.user — User 8556038889 added @wwwwwwswwwsw to monitoring (account_id=2)
+2026-05-04 14:04:46 | INFO     | aiogram.event — Update id=233630806 is handled. Duration 1281 ms by bot id=8767570591
+2026-05-04 14:04:47 | INFO     | telethon.client.updates — Got difference for channel 2636457768 updates
+2026-05-04 14:04:53 | INFO     | telethon.client.updates — Got difference for channel 2636457768 updates
+2026-05-04 14:04:56 | INFO     | services.monitor — Checking 2 monitored account(s)...
+2026-05-04 14:04:56 | INFO     | services.monitor — [DEBUG] 8374515523 | username: 'wfsfsdvv'->'wfsfsdvv' | name: 'ㅤ'->'ㅤ' | bio: 'You can contact @wfsfsdvv right away.'->'You can contact @wfsfsdvv right away.' | photo: '3a0c55594b675fb09481e85b3a04565d'->'3a0c55594b675fb09481e85b3a04565d'
+2026-05-04 14:04:56 | INFO     | services.monitor — [DEBUG] 8374515523 -- изменений нет
+2026-05-04 14:04:59 | INFO     | aiogram.event — Update id=233630807 is handled. Duration 450 ms by bot id=8767570591
+2026-05-04 14:04:59 | INFO     | services.monitor — [DEBUG] 8505959617 | username: 'wwwwwwswwwsw'->'wwwwwwswwwsw' | name: 'Ram Ram'->'Ram Ram' | bio: '@Tenixo — лучший магазин аккаунтов'->'You can contact @wwwwwwswwwsw right away.' | photo: '9b1ff77037c4ce48d47e344a1338195d'->'9b1ff77037c4ce48d47e344a1338195d'
+2026-05-04 14:05:00 | INFO     | services.monitor — Notified user 8556038889 about changes in @wwwwwwswwwsw: ['Bio']
+2026-05-04 14:05:12 | INFO     | services.monitor — Checking 2 monitored account(s)...
+2026-05-04 14:05:12 | INFO     | services.monitor — [DEBUG] 8374515523 | username: 'wfsfsdvv'->'wfsfsdvv' | name: 'ㅤ'->'ㅤ' | bio: 'You can contact @wfsfsdvv right away.'->'You can contact @wfsfsdvv right away.' | photo: '3a0c55594b675fb09481e85b3a04565d'->'3a0c55594b675fb09481e85b3a04565d'
+2026-05-04 14:05:12 | INFO     | services.monitor — [DEBUG] 8374515523 -- изменений нет
+2026-05-04 14:05:15 | INFO     | services.monitor — [DEBUG] 8505959617 | username: 'wwwwwwswwwsw'->'wwwwwwswwwsw' | name: 'Ram Ram'->'Ram Ram' | bio: 'You can contact @wwwwwwswwwsw right away.'->'h' | photo: '9b1ff77037c4ce48d47e344a1338195d'->'9b1ff77037c4ce48d47e344a1338195d'
+2026-05-04 14:05:16 | INFO     | services.monitor — Notified user 8556038889 about changes in @wwwwwwswwwsw: ['Bio']
+2026-05-04 14:05:28 | INFO     | services.monitor — Checking 2 monitored account(s)...
+2026-05-04 14:05:28 | INFO     | services.monitor — [DEBUG] 8374515523 | username: 'wfsfsdvv'->'wfsfsdvv' | name: 'ㅤ'->'ㅤ' | bio: 'You can contact @wfsfsdvv right away.'->'You can contact @wfsfsdvv right away.' | photo: '3a0c55594b675fb09481e85b3a04565d'->'3a0c55594b675fb09481e85b3a04565d'
+2026-05-04 14:05:28 | INFO     | services.monitor — [DEBUG] 8374515523 -- изменений нет
+2026-05-04 14:05:31 | INFO     | services.monitor — [DEBUG] 8505959617 | username: 'wwwwwwswwwsw'->'wwwwwwswwwsw' | name: 'Ram Ram'->'Ram Ram' | bio: 'h'->'h' | photo: '9b1ff77037c4ce48d47e344a1338195d'->'f62b6f3742e58f0a22811d8891e9a405'
+2026-05-04 14:05:31 | INFO     | services.monitor — Notified user 8556038889 about changes in @wwwwwwswwwsw: ['Фото профиля']
+2026-05-04 14:05:43 | INFO     | services.monitor — Checking 2 monitored account(s)...
+2026-05-04 14:05:44 | INFO     | services.monitor — [DEBUG] 8374515523 | username: 'wfsfsdvv'->'wfsfsdvv' | name: 'ㅤ'->'ㅤ' | bio: 'You can contact @wfsfsdvv right away.'->'You can contact @wfsfsdvv right away.' | photo: '3a0c55594b675fb09481e85b3a04565d'->'3a0c55594b675fb09481e85b3a04565d'
+2026-05-04 14:05:44 | INFO     | services.monitor — [DEBUG] 8374515523 -- изменений нет
+2026-05-04 14:05:47 | INFO     | services.monitor — [DEBUG] 8505959617 | username: 'wwwwwwswwwsw'->'' | name: 'Ram Ram'->'Ram Ram' | bio: 'h'->'h' | photo: 'f62b6f3742e58f0a22811d8891e9a405'->'f62b6f3742e58f0a22811d8891e9a405'
+2026-05-04 14:05:47 | INFO     | services.monitor — [DEBUG] 8505959617 -- изменений нет
+2026-05-04 14:05:59 | INFO     | services.monitor — Checking 2 monitored account(s)...
+2026-05-04 14:06:00 | INFO     | services.monitor — [DEBUG] 8374515523 | username: 'wfsfsdvv'->'wfsfsdvv' | name: 'ㅤ'->'ㅤ' | bio: 'You can contact @wfsfsdvv right away.'->'You can contact @wfsfsdvv right away.' | photo: '3a0c55594b675fb09481e85b3a04565d'->'3a0c55594b675fb09481e85b3a04565d'
+2026-05-04 14:06:00 | INFO     | services.monitor — [DEBUG] 8374515523 -- изменений нет
+2026-05-04 14:06:02 | INFO     | services.monitor — [DEBUG] 8505959617 | username: 'wwwwwwswwwsw'->'' | name: 'Ram Ram'->'Ram Ram' | bio: 'h'->'h' | photo: 'f62b6f3742e58f0a22811d8891e9a405'->'f62b6f3742e58f0a22811d8891e9a405'
+2026-05-04 14:06:02 | INFO     | services.monitor — [DEBUG] 8505959617 -- изменений нет
+2026-05-04 14:06:11 | INFO     | telethon.client.updates — Got difference for channel 2636457768 updates
+2026-05-04 14:06:14 | INFO     | services.monitor — Checking 2 monitored account(s)...
+2026-05-04 14:06:15 | INFO     | services.monitor — [DEBUG] 8374515523 | username: 'wfsfsdvv'->'wfsfsdvv' | name: 'ㅤ'->'ㅤ' | bio: 'You can contact @wfsfsdvv right away.'->'You can contact @wfsfsdvv right away.' | photo: '3a0c55594b675fb09481e85b3a04565d'->'3a0c55594b675fb09481e85b3a04565d'
+2026-05-04 14:06:15 | INFO     | services.monitor — [DEBUG] 8374515523 -- изменений нет
+2026-05-04 14:06:16 | INFO     | telethon.client.updates — Got difference for channel 3827190296 updates
+2026-05-04 14:06:18 | INFO     | services.monitor — [DEBUG] 8505959617 | username: 'wwwwwwswwwsw'->'' | name: 'Ram Ram'->'Ram Ram' | bio: 'h'->'h' | photo: 'f62b6f3742e58f0a22811d8891e9a405'->'f62b6f3742e58f0a22811d8891e9a405'
+2026-05-04 14:06:18 | INFO     | services.monitor — [DEBUG] 8505959617 -- изменений нет
+2026-05-04 14:06:30 | INFO     | services.monitor — Checking 2 monitored account(s)...
+2026-05-04 14:06:31 | INFO     | services.monitor — [DEBUG] 8374515523 | username: 'wfsfsdvv'->'wfsfsdvv' | name: 'ㅤ'->'ㅤ' | bio: 'You can contact @wfsfsdvv right away.'->'You can contact @wfsfsdvv right away.' | photo: '3a0c55594b675fb09481e85b3a04565d'->'3a0c55594b675fb09481e85b3a04565d'
+2026-05-04 14:06:31 | INFO     | services.monitor — [DEBUG] 8374515523 -- изменений нет
+2026-05-04 14:06:33 | INFO     | services.monitor — [DEBUG] 8505959617 | username: 'wwwwwwswwwsw'->'' | name: 'Ram Ram'->'Ram Ram' | bio: 'h'->'h' | photo: 'f62b6f3742e58f0a22811d8891e9a405'->'f62b6f3742e58f0a22811d8891e9a405'
+2026-05-04 14:06:33 | INFO     | services.monitor — [DEBUG] 8505959617 -- изменений нет
+2026-05-04 14:06:45 | INFO     | services.monitor — Checking 2 monitored account(s)...
+2026-05-04 14:06:46 | INFO     | services.monitor — [DEBUG] 8374515523 | username: 'wfsfsdvv'->'wfsfsdvv' | name: 'ㅤ'->'ㅤ' | bio: 'You can contact @wfsfsdvv right away.'->'You can contact @wfsfsdvv right away.' | photo: '3a0c55594b675fb09481e85b3a04565d'->'3a0c55594b675fb09481e85b3a04565d'
+2026-05-04 14:06:46 | INFO     | services.monitor — [DEBUG] 8374515523 -- изменений нет
+2026-05-04 14:06:49 | INFO     | services.monitor — [DEBUG] 8505959617 | username: 'wwwwwwswwwsw'->'' | name: 'Ram Ram'->'Ram Ram' | bio: 'h'->'h' | photo: 'f62b6f3742e58f0a22811d8891e9a405'->'f62b6f3742e58f0a22811d8891e9a405'
+2026-05-04 14:06:49 | INFO     | services.monitor — [DEBUG] 8505959617 -- изменений нет
+2026-05-04 14:06:51 | INFO     | telethon.client.updates — Got difference for channel 2636457768 updates
+2026-05-04 14:07:01 | INFO     | services.monitor — Checking 2 monitored account(s)...
+2026-05-04 14:07:02 | INFO     | services.monitor — [DEBUG] 8374515523 | username: 'wfsfsdvv'->'wfsfsdvv' | name: 'ㅤ'->'ㅤ' | bio: 'You can contact @wfsfsdvv right away.'->'You can contact @wfsfsdvv right away.' | photo: '3a0c55594b675fb09481e85b3a04565d'->'3a0c55594b675fb09481e85b3a04565d'
+2026-05-04 14:07:02 | INFO     | services.monitor — [DEBUG] 8374515523 -- изменений нет
+2026-05-04 14:07:05 | INFO     | services.monitor — [DEBUG] 8505959617 | username: 'wwwwwwswwwsw'->'' | name: 'Ram Ram'->'Ram Ram' | bio: 'h'->'h' | photo: 'f62b6f3742e58f0a22811d8891e9a405'->'f62b6f3742e58f0a22811d8891e9a405'
+2026-05-04 14:07:05 | INFO     | services.monitor — [DEBUG] 8505959617 -- изменений нет
+2026-05-04 14:07:14 | INFO     | telethon.client.updates — Got difference for channel 2636457768 updates
+2026-05-04 14:07:17 | INFO     | services.monitor — Checking 2 monitored account(s)...
+2026-05-04 14:07:17 | INFO     | services.monitor — [DEBUG] 8374515523 | username: 'wfsfsdvv'->'wfsfsdvv' | name: 'ㅤ'->'ㅤ' | bio: 'You can contact @wfsfsdvv right away.'->'You can contact @wfsfsdvv right away.' | photo: '3a0c55594b675fb09481e85b3a04565d'->'3a0c55594b675fb09481e85b3a04565d'
+2026-05-04 14:07:17 | INFO     | services.monitor — [DEBUG] 8374515523 -- изменений нет
+2026-05-04 14:07:20 | INFO     | services.monitor — [DEBUG] 8505959617 | username: 'wwwwwwswwwsw'->'' | name: 'Ram Ram'->'Ram Ram' | bio: 'h'->'h' | photo: 'f62b6f3742e58f0a22811d8891e9a405'->'f62b6f3742e58f0a22811d8891e9a405'
+2026-05-04 14:07:20 | INFO     | services.monitor — [DEBUG] 8505959617 -- изменений нет
+2026-05-04 14:07:32 | INFO     | services.monitor — Checking 2 monitored account(s)...
+2026-05-04 14:07:33 | INFO     | services.monitor — [DEBUG] 8374515523 | username: 'wfsfsdvv'->'wfsfsdvv' | name: 'ㅤ'->'ㅤ' | bio: 'You can contact @wfsfsdvv right away.'->'You can contact @wfsfsdvv right away.' | photo: '3a0c55594b675fb09481e85b3a04565d'->'3a0c55594b675fb09481e85b3a04565d'
+2026-05-04 14:07:33 | INFO     | services.monitor — [DEBUG] 8374515523 -- изменений нет
+2026-05-04 14:07:35 | INFO     | services.monitor — [DEBUG] 8505959617 | username: 'wwwwwwswwwsw'->'' | name: 'Ram Ram'->'Ram Ram' | bio: 'h'->'h' | photo: 'f62b6f3742e58f0a22811d8891e9a405'->'f62b6f3742e58f0a22811d8891e9a405'
+2026-05-04 14:07:35 | INFO     | services.monitor — [DEBUG] 8505959617 -- изменений нет
+2026-05-04 14:07:47 | INFO     | services.monitor — Checking 2 monitored account(s)...
+2026-05-04 14:07:50 | INFO     | services.monitor — [DEBUG] 8374515523 | username: 'wfsfsdvv'->'wfsfsdvv' | name: 'ㅤ'->'ㅤ' | bio: 'You can contact @wfsfsdvv right away.'->'You can contact @wfsfsdvv right away.' | photo: '3a0c55594b675fb09481e85b3a04565d'->'3a0c55594b675fb09481e85b3a04565d'
+2026-05-04 14:07:50 | INFO     | services.monitor — [DEBUG] 8374515523 -- изменений нет
+2026-05-04 14:07:52 | INFO     | services.monitor — [DEBUG] 8505959617 | username: 'wwwwwwswwwsw'->'' | name: 'Ram Ram'->'Ram Ram' | bio: 'h'->'h' | photo: 'f62b6f3742e58f0a22811d8891e9a405'->'f62b6f3742e58f0a22811d8891e9a405'
+2026-05-04 14:07:52 | INFO     | services.monitor — [DEBUG] 8505959617 -- изменений нет
+2026-05-04 14:08:04 | INFO     | services.monitor — Checking 2 monitored account(s)...
+2026-05-04 14:08:05 | INFO     | services.monitor — [DEBUG] 8374515523 | username: 'wfsfsdvv'->'wfsfsdvv' | name: 'ㅤ'->'ㅤ' | bio: 'You can contact @wfsfsdvv right away.'->'You can contact @wfsfsdvv right away.' | photo: '3a0c55594b675fb09481e85b3a04565d'->'3a0c55594b675fb09481e85b3a04565d'
+2026-05-04 14:08:05 | INFO     | services.monitor — [DEBUG] 8374515523 -- изменений нет
+2026-05-04 14:08:08 | INFO     | services.monitor — [DEBUG] 8505959617 | username: 'wwwwwwswwwsw'->'' | name: 'Ram Ram'->'Ram Ram' | bio: 'h'->'h' | photo: 'f62b6f3742e58f0a22811d8891e9a405'->'f62b6f3742e58f0a22811d8891e9a405'
+2026-05-04 14:08:08 | INFO     | services.monitor — [DEBUG] 8505959617 -- изменений нет
+2026-05-04 14:08:15 | INFO     | telethon.client.updates — Got difference for channel 2636457768 updates
+2026-05-04 14:08:19 | INFO     | aiogram.dispatcher — Polling stopped
+2026-05-04 14:08:19 | ERROR    | aiogram.dispatcher — Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+2026-05-04 14:08:19 | WARNING  | aiogram.dispatcher — Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8767570591)
+2026-05-04 14:08:19 | INFO     | __main__ — Shutting down…
+2026-05-04 14:08:19 | INFO     | telethon.network.mtprotosender — Disconnecting from 91.108.56.155:443/TcpFull...
+2026-05-04 14:08:19 | INFO     | telethon.network.mtprotosender — Disconnection from 91.108.56.155:443/TcpFull complete!
+2026-05-04 14:08:19 | INFO     | services.monitor — Telethon userbot disconnected.
+2026-05-04 14:08:19 | INFO     | db.database — Database connection closed.
+2026-05-04 14:08:19 | INFO     | aiogram.dispatcher — Polling stopped for bot @monitoringtgrobot id=8767570591 - 'monitoringtg'
+2026-05-04 14:08:27 | INFO     | db.database — Database initialized at data\monitor.db
+2026-05-04 14:08:27 | INFO     | telethon.network.mtprotosender — Connecting to 91.108.56.155:443/TcpFull...
+2026-05-04 14:08:27 | INFO     | telethon.network.mtprotosender — Connection to 91.108.56.155:443/TcpFull complete!
+2026-05-04 14:08:28 | INFO     | services.monitor — Telethon userbot started.
+2026-05-04 14:08:28 | INFO     | __main__ — Bot started. Admin ID: 6239437665
+2026-05-04 14:08:29 | INFO     | aiogram.dispatcher — Start polling
+2026-05-04 14:08:29 | INFO     | services.monitor — Monitoring loop started. Interval: 10 seconds.
+2026-05-04 14:08:29 | INFO     | services.monitor — Checking 2 monitored account(s)...
+2026-05-04 14:08:29 | INFO     | aiogram.dispatcher — Run polling for bot @monitoringtgrobot id=8767570591 - 'monitoringtg'
+2026-05-04 14:08:30 | INFO     | services.monitor — [DEBUG] 8374515523 | username: 'wfsfsdvv'->'wfsfsdvv' | name: 'ㅤ'->'ㅤ' | bio: 'You can contact @wfsfsdvv right away.'->'You can contact @wfsfsdvv right away.' | photo: '3a0c55594b675fb09481e85b3a04565d'->'3a0c55594b675fb09481e85b3a04565d'
+2026-05-04 14:08:30 | INFO     | services.monitor — [DEBUG] 8374515523 -- изменений нет
+2026-05-04 14:08:32 | INFO     | services.monitor — [DEBUG] 8505959617 | username: 'wwwwwwswwwsw'->'' | name: 'Ram Ram'->'Ram Ram' | bio: 'h'->'h' | photo: 'f62b6f3742e58f0a22811d8891e9a405'->'f62b6f3742e58f0a22811d8891e9a405'
+2026-05-04 14:08:33 | INFO     | services.monitor — Notified user 8556038889 about changes in @wwwwwwswwwsw: ['Username']
+2026-05-04 14:08:45 | INFO     | services.monitor — Checking 2 monitored account(s)...
+2026-05-04 14:08:45 | INFO     | services.monitor — [DEBUG] 8374515523 | username: 'wfsfsdvv'->'wfsfsdvv' | name: 'ㅤ'->'ㅤ' | bio: 'You can contact @wfsfsdvv right away.'->'You can contact @wfsfsdvv right away.' | photo: '3a0c55594b675fb09481e85b3a04565d'->'3a0c55594b675fb09481e85b3a04565d'
+2026-05-04 14:08:45 | INFO     | services.monitor — [DEBUG] 8374515523 -- изменений нет
+2026-05-04 14:08:48 | INFO     | services.monitor — [DEBUG] 8505959617 | username: 'wwwwwwswwwsw'->'' | name: 'Ram Ram'->'Ram Ram' | bio: 'h'->'h' | photo: 'f62b6f3742e58f0a22811d8891e9a405'->'f62b6f3742e58f0a22811d8891e9a405'
+2026-05-04 14:08:48 | INFO     | services.monitor — Notified user 8556038889 about changes in @wwwwwwswwwsw: ['Username']
+2026-05-04 14:09:00 | INFO     | services.monitor — Checking 2 monitored account(s)...
+2026-05-04 14:09:01 | INFO     | services.monitor — [DEBUG] 8374515523 | username: 'wfsfsdvv'->'wfsfsdvv' | name: 'ㅤ'->'ㅤ' | bio: 'You can contact @wfsfsdvv right away.'->'You can contact @wfsfsdvv right away.' | photo: '3a0c55594b675fb09481e85b3a04565d'->'3a0c55594b675fb09481e85b3a04565d'
+2026-05-04 14:09:01 | INFO     | services.monitor — [DEBUG] 8374515523 -- изменений нет
+2026-05-04 14:09:04 | INFO     | services.monitor — [DEBUG] 8505959617 | username: 'wwwwwwswwwsw'->'' | name: 'Ram Ram'->'Ram Ram' | bio: 'h'->'h' | photo: 'f62b6f3742e58f0a22811d8891e9a405'->'f62b6f3742e58f0a22811d8891e9a405'
+2026-05-04 14:09:04 | INFO     | services.monitor — Notified user 8556038889 about changes in @wwwwwwswwwsw: ['Username']
+2026-05-04 14:09:10 | INFO     | aiogram.dispatcher — Polling stopped
+2026-05-04 14:09:10 | ERROR    | aiogram.dispatcher — Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+2026-05-04 14:09:10 | WARNING  | aiogram.dispatcher — Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8767570591)
+2026-05-04 14:09:11 | INFO     | __main__ — Shutting down…
+2026-05-04 14:09:11 | INFO     | telethon.network.mtprotosender — Disconnecting from 91.108.56.155:443/TcpFull...
+2026-05-04 14:09:11 | INFO     | telethon.network.mtprotosender — Disconnection from 91.108.56.155:443/TcpFull complete!
+2026-05-04 14:09:11 | INFO     | services.monitor — Telethon userbot disconnected.
+2026-05-04 14:09:11 | INFO     | db.database — Database connection closed.
+2026-05-04 14:09:11 | INFO     | aiogram.dispatcher — Polling stopped for bot @monitoringtgrobot id=8767570591 - 'monitoringtg'
+2026-05-04 14:09:11 | ERROR    | asyncio — Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x0000022308845400>
+2026-05-04 14:09:11 | ERROR    | asyncio — Unclosed connector
+connections: ['deque([(<aiohttp.client_proto.ResponseHandler object at 0x0000022308844AD0>, 4020.021302)])']
+connector: <aiohttp.connector.TCPConnector object at 0x00000223087DAD50>
