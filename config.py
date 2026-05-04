@@ -16,6 +16,19 @@ def parse_admins(value: str) -> tuple[int, ...]:
     return tuple(admins)
 
 
+def parse_optional_int_env(name: str) -> int | None:
+    raw = os.getenv(name)
+    if raw is None:
+        return None
+    cleaned = raw.strip().strip('"').strip("'")
+    if not cleaned:
+        return None
+    try:
+        return int(cleaned)
+    except ValueError:
+        return None
+
+
 ADMINS = parse_admins(os.getenv("ADMINS", ""))
 
 
@@ -47,7 +60,7 @@ def load_config() -> Config:
         http_timeout=int(os.getenv("HTTP_TIMEOUT", "15")),
         alert_cooldown_seconds=int(os.getenv("ALERT_COOLDOWN_SECONDS", "300")),
         max_users=int(os.getenv("MAX_USERS", "100")),
-        telegram_api_id=int(os.getenv("TELEGRAM_API_ID")) if os.getenv("TELEGRAM_API_ID") else None,
+        telegram_api_id=parse_optional_int_env("TELEGRAM_API_ID"),
         telegram_api_hash=os.getenv("TELEGRAM_API_HASH", "").strip() or None,
         telegram_phone=os.getenv("TELEGRAM_PHONE", "").strip() or None,
         telegram_session_name=os.getenv("TELEGRAM_SESSION_NAME", "monitor_session").strip() or "monitor_session",

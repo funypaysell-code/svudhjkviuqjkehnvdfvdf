@@ -42,9 +42,11 @@ async def _menu_text(db, user_id: int) -> str:
 @router.callback_query(F.data == "tg_accounts_menu")
 async def tg_accounts_menu(callback: CallbackQuery, db, tg_account_monitor) -> None:
     if not tg_account_monitor.enabled:
+        missing = ", ".join(tg_account_monitor.missing_config_fields()) or "unknown"
         await callback.message.edit_text(
             "⚠️ Мониторинг TG-аккаунтов недоступен.\n\n"
-            "Добавьте в .env: TELEGRAM_API_ID, TELEGRAM_API_HASH, TELEGRAM_PHONE.",
+            "Добавьте в .env: TELEGRAM_API_ID, TELEGRAM_API_HASH, TELEGRAM_PHONE.\n\n"
+            f"Не найдено на сервере: <code>{missing}</code>",
             reply_markup=back_kb("main_menu"),
         )
         await callback.answer()

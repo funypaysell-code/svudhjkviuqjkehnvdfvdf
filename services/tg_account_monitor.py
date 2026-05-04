@@ -82,13 +82,24 @@ class TgAccountMonitorService:
     def enabled(self) -> bool:
         return bool(self.config.telegram_api_id and self.config.telegram_api_hash and self.config.telegram_phone)
 
+    def missing_config_fields(self) -> list[str]:
+        missing: list[str] = []
+        if not self.config.telegram_api_id:
+            missing.append("TELEGRAM_API_ID")
+        if not self.config.telegram_api_hash:
+            missing.append("TELEGRAM_API_HASH")
+        if not self.config.telegram_phone:
+            missing.append("TELEGRAM_PHONE")
+        return missing
+
     @staticmethod
     def parse_identifier(raw: str) -> tuple[str | int | None, str]:
         return parse_identifier(raw)
 
     async def start(self) -> None:
         if not self.enabled:
-            logger.warning("TG account monitor disabled: TELEGRAM_API_ID/HASH/PHONE are not configured.")
+            missing = ",".join(self.missing_config_fields()) or "unknown"
+            logger.warning("TG account monitor disabled. Missing env: %s", missing)
             return
         self._client = TelegramClient(
             self.config.telegram_session_name,
